@@ -661,8 +661,10 @@ p {
   box-shadow: var(--shadow-lg);
 }
 
-/* A taller frame for the vertical editorial piece, so it reads at a usable size */
-.project__media--tall {
+/* A taller frame for the vertical editorial piece, so it reads at a usable
+   size. The height has to go on the image, not on the wrapper: the wrapper
+   has no height of its own and would just leave dead space under the shot. */
+.project__media--tall .project__shot {
   height: 480px;
 }
 
@@ -1062,9 +1064,11 @@ p {
   margin-bottom: var(--space-xl);
 }
 
+/* Wide enough that the longest value — the email address — always fits on a
+   single line. At the 1100px container this settles into two columns. */
 .contact-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--space-sm);
   text-align: left;
 }
@@ -1220,7 +1224,8 @@ p {
     order: 0;
   }
 
-  .project__shot {
+  .project__shot,
+  .project__media--tall .project__shot {
     height: 240px;
   }
 
