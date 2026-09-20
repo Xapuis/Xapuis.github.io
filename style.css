@@ -732,6 +732,12 @@ p {
   background-color: rgba(63, 114, 175, 0.12);
 }
 
+/* Same shape as --status, green, for work done for a paying client */
+.tag--client {
+  color: #166534;
+  background-color: rgba(22, 163, 74, 0.12);
+}
+
 .project__title {
   font-size: clamp(1.5rem, 2.8vw, 2rem);
   font-weight: 700;
@@ -1148,31 +1154,33 @@ p {
    15. Scroll reveal animation
    -------------------------------------------------------------------------- */
 
-/* These use the standalone `translate` property rather than `transform`, so a
-   revealed element can still run its own :hover transform without the two
-   rules overwriting each other. */
+/* The hidden starting state only exists where a script can run to take it
+   away again. With no scripting the content is simply visible, so a failed
+   or blocked script can never leave the page blank.
 
-.reveal {
-  opacity: 0;
-  translate: 0 24px;
-  transition: opacity 0.6s var(--ease), translate 0.6s var(--ease);
+   The stagger children use the standalone `translate` property rather than
+   `transform`, so an element like .skill-group can still run its own :hover
+   transform without the two rules overwriting each other. */
+
+@media (scripting: enabled) {
+  .reveal:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  .reveal-stagger:not(.is-visible) > * {
+    opacity: 0;
+    translate: 0 20px;
+  }
 }
 
-.reveal.is-visible {
-  opacity: 1;
-  translate: 0 0;
+.reveal {
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
 }
 
 /* Stagger children inside a revealed grid */
 .reveal-stagger > * {
-  opacity: 0;
-  translate: 0 20px;
   transition: opacity 0.5s var(--ease), translate 0.5s var(--ease);
-}
-
-.reveal-stagger.is-visible > * {
-  opacity: 1;
-  translate: 0 0;
 }
 
 .reveal-stagger.is-visible > *:nth-child(1) { transition-delay: 0.05s; }
@@ -1323,6 +1331,7 @@ p {
   .reveal,
   .reveal-stagger > * {
     opacity: 1;
+    transform: none;
     translate: none;
   }
 }
@@ -1346,6 +1355,7 @@ p {
   .reveal,
   .reveal-stagger > * {
     opacity: 1;
+    transform: none;
     translate: none;
   }
 
