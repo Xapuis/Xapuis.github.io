@@ -1,430 +1,600 @@
-<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jordi de Leon Chapuis – Portfolio</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <!-- nav -->
-    <nav>
-      <span class="logo">xapuis.dev</span>
-      <div class="nav-links">
-        <a href="#projets">Projets</a>
-        <a href="#skills">Skills</a>
-        <a href="#a-propos">À propos</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordi de Leon Chapuis — Junior Front-end Developer &amp; Digital Designer</title>
 
-    <!-- hero -->
-    <div class="hero">
-      <div class="hero-content">
-        <div class="hero-available">
-          <span class="dot"></span>Disponible pour travailler
+  <meta name="description" content="Portfolio of Jordi de Leon Chapuis — Junior Front-end Developer and Digital Designer based in Switzerland.">
+  <meta name="author" content="Jordi de Leon Chapuis">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jordi de Leon Chapuis — Portfolio">
+  <meta property="og:description" content="Junior Front-end Developer and Digital Designer based in Switzerland.">
+  <meta property="og:image" content="https://xapuis.github.io/images/screenshot_web2.jpg">
+  <meta property="og:url" content="https://xapuis.github.io">
+  <meta property="og:locale" content="en">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#f9f7f7">
+
+  <link rel="canonical" href="https://xapuis.github.io">
+  <link rel="alternate" hreflang="en" href="https://xapuis.github.io/index.html">
+  <link rel="alternate" hreflang="es" href="https://xapuis.github.io/index_es.html">
+  <link rel="alternate" hreflang="fr" href="https://xapuis.github.io/index_fr.html">
+  <link rel="alternate" hreflang="x-default" href="https://xapuis.github.io/index.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ====================== NAV ====================== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="nav__logo" href="#top" aria-label="jordi.dev — home">jordi<span>.dev</span></a>
+
+      <nav class="nav__menu" id="nav-menu" aria-label="Main">
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#skills">Skills</a>
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#experience">Experience</a>
+        <a class="nav__link" href="#contact">Contact</a>
+        <a class="btn btn--primary btn--sm btn--cv-mobile" href="CV%20Programmer%202027.pdf" target="_blank" rel="noopener">Download CV</a>
+      </nav>
+
+      <div class="nav__actions">
+        <div class="lang" role="group" aria-label="Language">
+          <a class="lang__item" href="index.html" aria-current="true" hreflang="en">EN</a>
+          <a class="lang__item" href="index_es.html" hreflang="es">ES</a>
+          <a class="lang__item" href="index_fr.html" hreflang="fr">FR</a>
         </div>
-        <h1>Jordi de Leon<br /><span class="accent">Chapuis</span></h1>
-        <div class="hero-role">
-          // Junior Developer &amp; Multimedia Designer
+
+        <a class="btn btn--primary btn--sm btn--cv" href="CV%20Programmer%202027.pdf" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          CV
+        </a>
+
+        <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <span id="top"></span>
+
+    <!-- ====================== HERO ====================== -->
+    <section class="hero">
+      <div class="container hero__inner reveal">
+        <img class="hero__photo" src="images/cv.picture.jpg" alt="Portrait of Jordi de Leon Chapuis" width="168" height="168">
+
+        <div>
+          <h1 class="hero__name">Jordi de Leon Chapuis</h1>
+          <p class="hero__role">Junior Front-end Developer &amp; Digital Designer</p>
         </div>
-        <p class="hero-bio">
-          En reconversion professionnelle vers le développement web et le design
-          digital. Étudiant en Multimédia à <strong>l'UOC</strong> et en
-          formation sur campus <strong>mouredev.pro</strong>, je développe des
-          compétences en HTML, CSS et JavaScript, et j'utilise des outils d'IA
-          comme <strong>Claude Code</strong> pour créer des projets réels.
+
+        <span class="badge">
+          <span class="badge__dot" aria-hidden="true"></span>
+          Available for work
+        </span>
+
+        <p class="hero__location">
+          Based in Switzerland. Building real web projects while transitioning
+          into front-end development and digital design.
         </p>
-        <div class="hero-btns">
-          <a href="#contact" class="btn-primary">Me contacter →</a>
-          <a href="CV_Jordi de Leon Chapuis.pdf" class="btn-secondary"
-            >📄 Télécharger CV</a
-          >
-          <a href="https://github.com/Xapuis" class="btn-secondary">GitHub →</a>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#contact">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Get in touch
+          </a>
+
+          <a class="btn btn--secondary" href="CV%20Programmer%202027.pdf" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download CV
+          </a>
+
+          <a class="btn btn--ghost" href="https://github.com/Xapuis" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"></path></svg>
+            GitHub
+          </a>
+
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/jordi-de-leon-chapuis-488936340/" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg>
+            LinkedIn
+          </a>
         </div>
       </div>
-      <img src="images/cv.picture.HEIC" alt="Jordi" class="avatar-img" />
+    </section>
+
+    <!-- ====================== PROJECTS ====================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__label">01 — Work</span>
+          <h2>Projects</h2>
+          <p class="section__intro">
+            These are my personal projects  some finished, others still being
+            wrapped up.
+          </p>
+        </header>
+
+        <div class="projects reveal-stagger">
+
+          <!-- Confiserie Roelli -->
+          <article class="project">
+            <div class="project__media">
+              <img class="project__shot" src="images/screenshot_web2.jpg" alt="Screenshot of the Confiserie Roelli website" loading="lazy">
+            </div>
+            <div class="project__body">
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <h3 class="project__title">Confiserie Roelli</h3>
+              <p class="project__desc">
+                Website built for a local Swiss bakery. I designed the visual
+                environment, handled the multimedia elements, and structured the
+                layout of each section. Built with HTML and CSS, it includes a
+                contact section and is adapted to the languages of the region.
+                Hosted on Infomaniak and updated regularly based on the client's
+                needs.
+              </p>
+              <p class="project__role"><strong>Role:</strong> Full front-end development</p>
+              <div class="project__links">
+                <a class="project__link" href="https://github.com/Xapuis/Confiserie-Roelli" target="_blank" rel="noopener">
+                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"></path></svg>
+                  GitHub repo
+                </a>
+                <a class="project__link" href="https://xapuis.github.io/Confiserie-Roelli" target="_blank" rel="noopener">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  Preview
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Delicious Coffee -->
+          <article class="project">
+            <div class="project__media">
+              <img class="project__shot" src="images/screenshot_CoffeWeb.jpg" alt="Screenshot of the Delicious Coffee website" loading="lazy">
+            </div>
+            <div class="project__body">
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
+              <h3 class="project__title">Delicious Coffee</h3>
+              <p class="project__desc">
+                A complete multi-page website for a fictional coffee shop, built as part of my HTML &amp; CSS studies at UOC. Includes a home page, a brew guide and a contact form.
+              </p>
+              <p class="project__role"><strong>Role:</strong> Front-end development, responsive design</p>
+              <div class="project__links">
+                <a class="project__link" href="https://github.com/Xapuis/proyect-html-css" target="_blank" rel="noopener">
+                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"></path></svg>
+                  GitHub repo
+                </a>
+                <a class="project__link" href="https://xapuis.github.io/Proyect-html-css" target="_blank" rel="noopener">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  Preview
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Verde Coworking -->
+          <article class="project">
+            <div class="project__media project__media--tall">
+              <img class="project__shot project__shot--contain" src="images/screnshoot_graphicdesign.jpg" alt="Graphic design layout for Verde Coworking" loading="lazy">
+            </div>
+            <div class="project__body">
+              <div class="tags">
+                <span class="tag">Design</span>
+                <span class="tag">InDesign</span>
+                <span class="tag">Visual</span>
+              </div>
+              <h3 class="project__title">Verde Coworking</h3>
+              <p class="project__desc">
+                A full graphic design project for a fictional coworking space, created during my Graphic Design course at UOC. We had to create a landing page design and a printed newsletter from scratch, including the full visual identity, layout and typography.
+              </p>
+              <p class="project__role"><strong>Role:</strong> Graphic design, editorial layout, typography</p>
+              <div class="project__links">
+                <a class="project__link" href="https://github.com/Xapuis/proyect-graphic-design" target="_blank" rel="noopener">
+                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"></path></svg>
+                  GitHub repo
+                </a>
+                <a class="project__link" href="https://xapuis.github.io/proyect-graphic-design" target="_blank" rel="noopener">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  Preview
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- App Personal -->
+          <article class="project">
+            <div class="project__media project__media--placeholder">
+              <span class="project__placeholder-mark" aria-hidden="true">{ }</span>
+            </div>
+            <div class="project__body">
+              <div class="tags">
+                <span class="tag">AI</span>
+                <span class="tag">Claude Code</span>
+                <span class="tag">React Native</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag tag--status">In active development</span>
+              </div>
+              <h3 class="project__title">Personal App</h3>
+              <p class="project__desc">
+                Currently building an iOS and Android app using React Native and
+                JavaScript. I designed the full UX structure of the app from
+                scratch, including the home menu, user profiles, upload system,
+                and login screen. All pages designed and built by me, using AI as
+                an assistant with Claude Code. Tested on my own devices using
+                Android Simulator and Xcode. Expected launch: end of 2026.
+              </p>
+              <p class="project__role"><strong>Role:</strong> Concept, logic and AI-assisted development</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SKILLS ====================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__label">02 — Toolkit</span>
+          <h2>Skills</h2>
+        </header>
+
+        <div class="skills reveal-stagger">
+
+          <div class="skill-group">
+            <h3 class="skill-group__title">Frontend</h3>
+            <ul class="skill-list">
+              <li class="skill"><span>HTML5</span><span class="skill__level">intermediate</span></li>
+              <li class="skill"><span>CSS3</span><span class="skill__level">intermediate</span></li>
+              <li class="skill"><span>Responsive Design</span><span class="skill__level">intermediate</span></li>
+              <li class="skill"><span>JavaScript</span><span class="skill__level">learning</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__title">Design</h3>
+            <ul class="skill-list">
+              <li class="skill"><span>Graphic Design</span><span class="skill__level">intermediate</span></li>
+              <li class="skill"><span>Typography</span><span class="skill__level">intermediate</span></li>
+              <li class="skill"><span>Adobe InDesign</span><span class="skill__level">intermediate</span></li>
+              <li class="skill"><span>Adobe Illustrator</span><span class="skill__level">intermediate</span></li>
+              <li class="skill"><span>Adobe Premiere</span><span class="skill__level">intermediate</span></li>
+              <li class="skill"><span>Audiovisual Production</span><span class="skill__level">experienced</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__title">AI &amp; Tools</h3>
+            <ul class="skill-list">
+              <li class="skill"><span>Claude Code</span><span class="skill__level">active</span></li>
+              <li class="skill"><span>Vibe coding</span><span class="skill__level">active</span></li>
+              <li class="skill"><span>Prompting</span><span class="skill__level">advanced</span></li>
+              <li class="skill"><span>Git / GitHub</span><span class="skill__level">learning</span></li>
+              <li class="skill"><span>Visual Studio Code</span><span class="skill__level">daily</span></li>
+              <li class="skill"><span>React Native</span><span class="skill__level">learning</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__title">Soft Skills</h3>
+            <ul class="skill-list">
+              <li class="skill"><span>Teamwork</span><span class="skill__level">solid</span></li>
+              <li class="skill"><span>Adaptability</span><span class="skill__level">solid</span></li>
+              <li class="skill"><span>Pressure management</span><span class="skill__level">solid</span></li>
+              <li class="skill"><span>Fast learner</span><span class="skill__level">solid</span></li>
+              <li class="skill"><span>Initiative</span><span class="skill__level">solid</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== ABOUT ====================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__label">03 — Profile</span>
+          <h2>About me</h2>
+        </header>
+
+        <div class="about reveal">
+          <div class="about__text">
+            <p>
+              Hi, I'm Jordi de Leon Chapuis. I started learning programming when
+              I enrolled in the Multimedia degree at UOC, which I'm currently
+              studying. Since then I've built several projects from scratch. One
+              of my proudest achievements is building a website for a local Swiss
+              bakery I handled everything myself: design, multimedia,
+              development and deployment. It's not a huge thing, but for me it's
+              a very important step forward.
+            </p>
+            <p>
+              I try to learn something new every day. I'm currently training at
+              the mouredev.pro campus, deepening my knowledge of different
+              programming languages with a growing interest in JavaScript and
+              Python.
+            </p>
+            <p>
+              I'm also very interested in how AI is being integrated into
+              everyday work. I use tools like Claude Code to build real projects,
+              but always under my own judgment using AI as an ally, not letting
+              it do everything for me.
+            </p>
+            <p>
+              My goal is to work as a front-end developer at a company where I
+              can keep improving my skills, learn more and become a better
+              programmer every day.
+            </p>
+          </div>
+
+          <aside class="about__card">
+            <h3 class="about__card-title">What I'm learning</h3>
+            <ul class="learning-list">
+              <li>JavaScript (DOM, logic, ES6+) at mouredev.pro</li>
+              <li>App development with Claude Code and vibe coding</li>
+              <li>Git and GitHub workflows</li>
+              <li>AI agents applied to programming</li>
+              <li>Multimedia: design, audio, video (UOC)</li>
+              <li>UX/UI and interface design</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== EXPERIENCE & EDUCATION ====================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__label">04 — Path</span>
+          <h2>Experience &amp; Education</h2>
+        </header>
+
+        <div class="timelines reveal">
+
+          <div class="timeline">
+            <h3 class="timeline__title">Experience</h3>
+            <ul class="timeline__list">
+              <li class="timeline__item timeline__item--current">
+                <span class="timeline__date">July 2025 — present</span>
+                <p class="timeline__role">Vendeur polyvalent</p>
+                <p class="timeline__org">Boulangerie Roelli</p>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__date">May 2024 — May 2025</span>
+                <p class="timeline__role">Cabin Crew</p>
+                <p class="timeline__org">Norwegian Air Shuttle</p>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__date">May 2022 — April 2024</span>
+                <p class="timeline__role">Cabin Crew Supervisor</p>
+                <p class="timeline__org">Buzz Air (Ryanair Group)</p>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__date">Oct 2020 — Sep 2021</span>
+                <p class="timeline__role">Assembly &amp; Distribution</p>
+                <p class="timeline__org">Muebles Sambade</p>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__date">Jun 2017 — Sep 2017</span>
+                <p class="timeline__role">Waiter</p>
+                <p class="timeline__org">Belmar Cafeteria</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="timeline">
+            <h3 class="timeline__title">Education</h3>
+            <ul class="timeline__list">
+              <li class="timeline__item timeline__item--current">
+                <span class="timeline__date">Feb 2025 — present</span>
+                <p class="timeline__role">Multimedia Degree</p>
+                <p class="timeline__org">UOC — Universitat Oberta de Catalunya</p>
+              </li>
+              <li class="timeline__item timeline__item--current">
+                <span class="timeline__date">2025 — present</span>
+                <p class="timeline__role">Web development</p>
+                <p class="timeline__org">Campus mouredev.pro</p>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__date">2019 — 2020</span>
+                <p class="timeline__role">Cabin Crew Attestation EASA</p>
+                <p class="timeline__org">European Union Aviation Safety Agency</p>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__date">2015 — 2017</span>
+                <p class="timeline__role">Higher Certificate in Audiovisual Production</p>
+                <p class="timeline__org">CPR Raio Verde</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="languages reveal">
+          <h3 class="languages__title">Languages</h3>
+          <ul class="languages__list">
+            <li class="language">Spanish <span class="language__level">native</span></li>
+            <li class="language">French <span class="language__level">native</span></li>
+            <li class="language">Galician <span class="language__level">native</span></li>
+            <li class="language">English <span class="language__level">B2 / C1</span></li>
+            <li class="language">Portuguese <span class="language__level">A2</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CONTACT ====================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__label">05 — Contact</span>
+          <h2>Let's talk</h2>
+        </header>
+
+        <div class="contact-card reveal">
+          <h3 class="contact-card__title">Open to junior front-end and digital design roles</h3>
+          <p class="contact-card__text">
+            Available for work in Switzerland or remotely. Feel free to reach out
+            about internships, apprenticeships or junior positions.
+          </p>
+
+          <div class="contact-list">
+            <a class="contact-item" href="mailto:jordideleon@hotmail.com">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>
+                <span class="contact-item__label">Email</span>
+                <span class="contact-item__value">jordideleon@hotmail.com</span>
+              </span>
+            </a>
+
+            <a class="contact-item" href="tel:+41767985927">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>
+                <span class="contact-item__label">Phone</span>
+                <span class="contact-item__value">076 798 59 27</span>
+              </span>
+            </a>
+
+            <a class="contact-item" href="https://github.com/Xapuis" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"></path></svg>
+              <span>
+                <span class="contact-item__label">GitHub</span>
+                <span class="contact-item__value">github.com/Xapuis</span>
+              </span>
+            </a>
+
+            <a class="contact-item" href="https://www.linkedin.com/in/jordi-de-leon-chapuis-488936340/" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg>
+              <span>
+                <span class="contact-item__label">LinkedIn</span>
+                <span class="contact-item__value">Connect with me</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">© <span id="year">2026</span> Jordi de Leon Chapuis — Built with HTML &amp; CSS</p>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#top">Back to top</a>
+        <a href="https://github.com/Xapuis" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:jordideleon@hotmail.com">Email</a>
+      </nav>
     </div>
+  </footer>
 
-    <div class="container">
-      <!-- projets -->
-      <section class="section" id="projets">
-        <div class="section-tag">Projets principaux</div>
-        <h2>Ce que j'ai construit</h2>
-        <div class="projects">
-          <div class="project-card">
-            <div class="project-info">
-              <div class="proj-tags">
-                <span class="tag t-html">HTML</span>
-                <span class="tag t-css">CSS</span>
-              </div>
-              <h3 class="proj-title">Projet Web — Delicious Coffee</h3>
-              <p class="proj-desc">
-                Mise en page web complète développée comme travail
-                universitaire. Structure sémantique, design responsive et
-                accessibilité de base.
-              </p>
-              <div class="proj-role">
-                Développement front-end, design visuel, mise en page
-              </div>
-            </div>
-            <div class="proj-links">
-              <a
-                href="https://github.com/Xapuis/Proyect-html-css"
-                class="proj-link"
-                >&lt;/&gt; Code</a
-              >
-            </div>
-          </div>
+  <script>
+    (function () {
+      "use strict";
 
-          <div class="project-card">
-            <div class="project-info">
-              <div class="proj-tags">
-                <span class="tag t-design">Design</span>
-                <span class="tag t-figma">Visual</span>
-              </div>
-              <h3 class="proj-title">Design Graphique UOC — Verde Coworking</h3>
-              <p class="proj-desc">
-                Projets de design d'une matière universitaire : composition
-                typographique, hiérarchie visuelle, palette de couleurs et
-                cohérence de marque.
-              </p>
-              <div class="proj-role">
-                Design graphique, identité visuelle, typographie
-              </div>
-            </div>
-            <div class="proj-links">
-              <a
-                href="https://github.com/Xapuis/proyect-graphic-design"
-                class="proj-link"
-                >Voir les créations →</a
-              >
-            </div>
-          </div>
+      /* ---- Current year ---- */
+      var yearEl = document.getElementById("year");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-          <div class="project-card">
-            <div class="project-info">
-              <div class="proj-tags">
-                <span class="tag t-ai">IA</span>
-                <span class="tag t-js">JavaScript</span>
-              </div>
-              <h3 class="proj-title">App Personnel — Real Trip</h3>
-              <p class="proj-desc">
-                Application construite avec vibe coding et Claude Code. Flux de
-                développement guidé par l'IA, combinant logique personnelle et
-                intégration d'outils modernes.
-              </p>
-              <div class="proj-role">
-                Développement complet, prompting, architecture de base
-              </div>
-              <div class="wip">
-                <span class="wip-dot"></span>En développement actif
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      /* ---- Nav shadow on scroll ---- */
+      var nav = document.getElementById("nav");
+      var onScroll = function () {
+        nav.classList.toggle("is-scrolled", window.scrollY > 8);
+      };
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
 
-      <!-- skills -->
-      <section class="section" id="skills">
-        <div class="section-tag">Compétences techniques</div>
-        <h2>Stack et outils</h2>
-        <div class="skills-cats">
-          <div class="skill-cat">
-            <div class="skill-cat-title">Frontend</div>
-            <div class="skill-items">
-              <div class="skill-item">
-                HTML5 <span class="skill-lvl ok">intermédiaire</span>
-              </div>
-              <div class="skill-item">
-                CSS3 <span class="skill-lvl ok">intermédiaire</span>
-              </div>
-              <div class="skill-item">
-                Responsive Design
-                <span class="skill-lvl ok">intermédiaire</span>
-              </div>
-              <div class="skill-item">
-                JavaScript <span class="skill-lvl learn">en apprentissage</span>
-              </div>
-            </div>
-          </div>
+      /* ---- Mobile menu ---- */
+      var toggle = document.getElementById("nav-toggle");
+      var menu = document.getElementById("nav-menu");
 
-          <div class="skill-cat">
-            <div class="skill-cat-title">Design</div>
-            <div class="skill-items">
-              <div class="skill-item">
-                Design Graphique <span class="skill-lvl ok">intermédiaire</span>
-              </div>
-              <div class="skill-item">
-                Composition visuelle
-                <span class="skill-lvl ok">intermédiaire</span>
-              </div>
-              <div class="skill-item">
-                Typographie <span class="skill-lvl ok">intermédiaire</span>
-              </div>
-              <div class="skill-item">
-                Production audiovisuelle
-                <span class="skill-lvl good">expérience</span>
-              </div>
-              <div class="skill-item">
-                Adobe InDesign <span class="skill-lvl ok">intermédiaire</span>
-              </div>
-              <div class="skill-item">
-                Adobe Illustrator
-                <span class="skill-lvl ok">intermédiaire</span>
-              </div>
-              <div class="skill-item">
-                Adobe Premiere <span class="skill-lvl ok">intermédiaire</span>
-              </div>
-            </div>
-          </div>
+      var closeMenu = function () {
+        menu.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      };
 
-          <div class="skill-cat">
-            <div class="skill-cat-title">IA &amp; Outils</div>
-            <div class="skill-items">
-              <div class="skill-item">
-                Visual Studio Code <span class="skill-lvl good">actif</span>
-              </div>
-              <div class="skill-item">
-                Claude Code <span class="skill-lvl good">actif</span>
-              </div>
-              <div class="skill-item">
-                Vibe coding <span class="skill-lvl good">actif</span>
-              </div>
-              <div class="skill-item">
-                Prompting <span class="skill-lvl good">avancé</span>
-              </div>
-              <div class="skill-item">
-                Git / GitHub
-                <span class="skill-lvl learn">en apprentissage</span>
-              </div>
-            </div>
-          </div>
+      toggle.addEventListener("click", function () {
+        var open = menu.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", String(open));
+      });
 
-          <div class="skill-cat">
-            <div class="skill-cat-title">Soft skills</div>
-            <div class="skill-items">
-              <div class="skill-item">
-                Travail en équipe <span class="skill-lvl good">solide</span>
-              </div>
-              <div class="skill-item">
-                Adaptabilité <span class="skill-lvl good">solide</span>
-              </div>
-              <div class="skill-item">
-                Gestion du stress <span class="skill-lvl good">solide</span>
-              </div>
-              <div class="skill-item">
-                Communication <span class="skill-lvl good">solide</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      menu.addEventListener("click", function (e) {
+        if (e.target.closest("a")) closeMenu();
+      });
 
-      <!-- à propos -->
-      <section class="section" id="a-propos">
-        <div class="section-tag">À propos</div>
-        <h2>Qui suis-je</h2>
-        <div class="about-grid">
-          <div class="about-text">
-            <p>
-              Je m'appelle Jordi, j'ai la double nationalité
-              <strong>suisse-espagnole</strong> et je vis à Porrentruy (Jura,
-              Suisse). Je suis en reconversion professionnelle vers le monde de
-              la tech et du design numérique.
-            </p>
-            <p>
-              Actuellement en
-              <strong
-                >reconversion professionnelle vers le développement web et le
-                design digital</strong
-              >. J'étudie le grade en Multimédia à l'<strong>UOC</strong> et je
-              me forme en continu sur le <strong>campus mouredev.pro</strong>,
-              où j'apprends HTML, CSS, JavaScript et Python. Je construis des
-              projets réels en utilisant <strong>Claude Code</strong> et
-              l'intelligence artificielle appliquée à la programmation.
-            </p>
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeMenu();
+      });
 
-            <p>
-              Je maîtrise des outils de design tels qu'<strong
-                >Adobe InDesign, Illustrator et Premiere</strong
-              >, et je travaille quotidiennement avec
-              <strong>Visual Studio Code et Git</strong>. Mon objectif est
-              d'évoluer en tant que développeur front-end et designer digital
-              dans un environnement professionnel où je peux continuer à
-              apprendre.
-            </p>
+      /* ---- Scroll reveal ---- */
+      var revealables = document.querySelectorAll(".reveal, .reveal-stagger");
 
-            <p>
-              Je dispose de plusieurs années d'expérience dans des
-              environnements internationaux exigeants en tant que
-              <strong>superviseur de cabine</strong> chez Norwegian Air Shuttle
-              et Ryanair Group. Cette expérience m'a formé à la gestion
-              d'équipes, à la responsabilité et au travail sous pression — des
-              compétences que j'applique directement au quotidien.
-            </p>
-            <div class="langs-block">
-              <div class="section-tag">Langues</div>
-              <div class="langs-grid">
-                <div class="lang-card native">
-                  <div class="lang-name">Espagnol</div>
-                  <div class="lang-level">Natif</div>
-                </div>
-                <div class="lang-card native">
-                  <div class="lang-name">Français</div>
-                  <div class="lang-level">Natif</div>
-                </div>
-                <div class="lang-card native">
-                  <div class="lang-name">Galicien</div>
-                  <div class="lang-level">Natif</div>
-                </div>
-                <div class="lang-card">
-                  <div class="lang-name">Anglais</div>
-                  <div class="lang-level">B2 / C1</div>
-                </div>
-                <div class="lang-card">
-                  <div class="lang-name">Portugais</div>
-                  <div class="lang-level">A2</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="learn-box">
-            <div class="learn-box-title">Qu'est-ce que j'apprends ?</div>
-            <div class="learn-item">
-              JavaScript (DOM, logique, ES6+) sur mouredev.pro
-            </div>
-            <div class="learn-item">
-              Développement d'apps avec Claude Code et vibe coding
-            </div>
-            <div class="learn-item">Git et flux de travail sur GitHub</div>
-            <div class="learn-item">Agents IA appliqués à la programmation</div>
-            <div class="learn-item">
-              Multimédia : design, audio, vidéo (UOC)
-            </div>
-            <div class="learn-item">UX/UI et design d'interfaces</div>
-          </div>
-        </div>
-      </section>
+      if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
+        );
+        revealables.forEach(function (el) {
+          observer.observe(el);
+        });
+      } else {
+        revealables.forEach(function (el) {
+          el.classList.add("is-visible");
+        });
+      }
 
-      <!-- formation et expérience -->
-      <section class="section" id="formation">
-        <div class="section-tag">Formation &amp; Expérience</div>
-        <h2>Parcours</h2>
-        <div class="exp-list">
-          <div class="exp-item">
-            <div>
-              <div class="exp-title">Licence en Multimédia</div>
-              <div class="exp-co">UOC – Universitat Oberta de Catalunya</div>
-              <div class="exp-desc">
-                Diplôme universitaire officiel. Programmation web, design
-                graphique, production audiovisuelle, UX/UI.
-              </div>
-            </div>
-            <div class="exp-date">2025 – auj.</div>
-          </div>
+      /* ---- Active section in nav ---- */
+      var sections = document.querySelectorAll("main section[id]");
+      var navLinks = document.querySelectorAll(".nav__link");
 
-          <div class="exp-item">
-            <div>
-              <div class="exp-title">Campus mouredev.pro</div>
-              <div class="exp-co">Formation en ligne en programmation</div>
-              <div class="exp-desc">
-                Cours de Python, JavaScript, HTML, CSS et autres langages.
-                Formation pratique et continue en développement logiciel.
-              </div>
-            </div>
-            <div class="exp-date">2026 – auj.</div>
-          </div>
+      if ("IntersectionObserver" in window && sections.length) {
+        var spy = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              var id = entry.target.getAttribute("id");
+              navLinks.forEach(function (link) {
+                link.classList.toggle(
+                  "is-active",
+                  link.getAttribute("href") === "#" + id
+                );
+              });
+            });
+          },
+          { rootMargin: "-40% 0px -55% 0px" }
+        );
+        sections.forEach(function (s) {
+          spy.observe(s);
+        });
+      }
+    })();
+  </script>
 
-          <div class="exp-item">
-            <div>
-              <div class="exp-title">Apprentissage autodidacte</div>
-              <div class="exp-co">Claude Code + projets personnels</div>
-              <div class="exp-desc">
-                Développement de projets réels avec l'IA. Cours d'utilisation de
-                l'IA pour programmer.
-              </div>
-            </div>
-            <div class="exp-date">2025 – auj.</div>
-          </div>
-
-          <div class="exp-item">
-            <div>
-              <div class="exp-title">Personnel de cabine · Superviseur</div>
-              <div class="exp-co">
-                Norwegian Air Shuttle / Buzz Air (Ryanair Group)
-              </div>
-              <div class="exp-desc">
-                Gestion d'équipes, service client international, travail en
-                environnements à haute exigence et responsabilité.
-              </div>
-            </div>
-            <div class="exp-date">2022 – 2025</div>
-          </div>
-
-          <div class="exp-item">
-            <div>
-              <div class="exp-title">
-                Certificat en Production Audiovisuelle
-              </div>
-              <div class="exp-co">CPR Raio Verde – Santiago de Compostela</div>
-              <div class="exp-desc">
-                Radio, spectacles et production audiovisuelle. Bases en design
-                et communication.
-              </div>
-            </div>
-            <div class="exp-date">2015 – 2017</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- contact -->
-      <section class="section section-contacto" id="contact">
-        <div class="contact-box">
-          <div class="contact-info">
-            <h2>Contactez-moi</h2>
-            <p>
-              Je cherche ma première opportunité en tant que développeur junior
-              ou designer. Je n'ai pas encore d'expérience professionnelle dans
-              ce domaine, mais je suis passionné par le monde de la tech et du
-              design. Je suis déterminé à apprendre chaque jour davantage et
-              ouvert à toute opportunité qui me permettra de progresser.
-            </p>
-          </div>
-          <div class="contact-items">
-            <a href="mailto:jordideleon@hotmail.com" class="contact-row">
-              <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
-              jordideleon@hotmail.com
-            </a>
-            <a href="tel:0767985927" class="contact-row">
-              <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
-              076 798 59 27
-            </a>
-
-            <a href="https://github.com/Xapuis" class="contact-row">
-              <div class="c-icon"><i class="fa-brands fa-github"></i></div>
-              GitHub <span class="c-placeholder">Xapuis</span>
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <footer>
-      © 2025 Jordi de Leon Chapuis · Porrentruy, Suisse · HTML · CSS ·
-      JavaScript · IA
-    </footer>
-    <script>
-      history.scrollRestoration = "manual";
-      window.scrollTo(0, 0);
-    </script>
-  </body>
+</body>
 </html>
